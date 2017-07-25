@@ -1,22 +1,27 @@
 console.log("Dothraki.js");
 
-let outputArea = getElementById("");
+function translateToDothraki(individualWords){
+    
+}
+
+let outputArea = getElementById("transUpdated");
 
 var Knights = (function(originalKnights){
    let Dothraki = {
-    "merry ":"", 
-    "christmas ":"",
-    "ya ": "",
-    "filthy ": "",
-    "animal ": "",
-    "hanukkah ":"",
-    "kwanzaa ":"",
-    "tree ":"",
-    "good ":"",
-    "tidings ":"", 
-    "and ":"", 
-    "happy ":"", 
-    "new ":"", 
-    "year ":"",
-    }
-});
+    "merry ":"layafat ", 
+    "christmas ":"vitteyqoyi ",
+    "ya ": "yer ",
+    "filthy ": "sorf ",
+    "animal ": "rhoa ",
+    "hanukkah ":"viteya ",
+    "kwanzaa ":"viteya ",
+    "tree ":"feshith ",
+    "good ":"erin ",
+    "tidings ":"vasterat ", 
+    "and ":"ma ", 
+    "happy ":"layafat ", 
+    "new ":"sash ", 
+    "year ":"firesof ",
+}
+    return originalKnights;
+})(Knights);
