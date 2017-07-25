@@ -2,8 +2,15 @@ console.log("main.js");
 
 let addTranslate = document.getElementById("btn-translate");
 
+
 addTranslate.addEventListener("click", () => {
-    let textTrans = document.getElementById("transText");
+    let textTrans = document.getElementById("transText").value;
+    var individualWords = textTrans.split(" ");
+    for (var i = 0; i < individualWords.length - 1; i++) {
+    individualWords[i] += " ";
+     console.log("individualWords", individualWords);
+}
+
     let whichselected;
     var radios = document.getElementsByName("rad-lang");
     for(let i = 0; i < radios.length; i++){
@@ -16,12 +23,12 @@ addTranslate.addEventListener("click", () => {
     console.log ('whichselected', whichselected);
 
     if (whichselected == 0){
-        Knights.translateToBinary(textTrans);
+        Knights.translateToBinary(individualWords);
     }else if (whichselected == 1){
-        Knights.tranlsateToDothraki(textTrans);
+        Knights.tranlsateToDothraki(individualWords);
     }else if (whichselected == 2){
-        Knights.translateToItalian(textTrans);
+        Knights.translateToItalian(individualWords);
     }else if (whichselected ==3){
-        Knights.translateToOfficeSpeak(textTrans);
+        Knights.translateToOfficeSpeak(individualWords);
     }
 });
