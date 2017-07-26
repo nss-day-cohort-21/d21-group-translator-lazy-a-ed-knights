@@ -1,6 +1,5 @@
 console.log ("officespeak.js");
 
-
 var Knights = (function(originalKnights){
 
     let myOfficeSpeak = {
@@ -22,6 +21,8 @@ var Knights = (function(originalKnights){
 }
 
     originalKnights.translateToOfficeSpeak = function(){
+        let error = document.getElementById("error-message");
+         error.innerHTML = " ";
         let userInput = transText.value;
             userInput = userInput.toUpperCase();
         let newUserInput = userInput.split(" ");
