@@ -40,8 +40,9 @@ var Knights = (function(originalKnights){
 		let translation = italian[word];
 		if (word in italian){
 		transArray.push(translation)
-		} else if (word.length > 1){
-				badWords.push(word);
+		} else{
+			badWords.push(word);
+		} if (badWords.length > 1){	
 				let badWordsArray = badWords.join(", ");
 				// console.log("badWordsArray",badWordsArray);
 				document.getElementById("error-message").innerHTML = `<b><i>"${badWordsArray}"</b></i> have been removed because they are not in our Italian dictionary.`
