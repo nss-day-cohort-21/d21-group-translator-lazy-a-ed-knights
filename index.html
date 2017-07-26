@@ -1,37 +1,40 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>The Lazy A$$ed Knights</title>
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-</head>
-<body>
-<div id="availableWords">
-	<h2>Available Words & Popular Phrases</h2>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>The Lazy A$$ed Knights</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="program">
+				<div id="availableWords">
+					<h1>Choose A Language Below To Translate</h1>
+					<h3>Binary | Dothraki | Italian | Office Speak</h3>
+					<h2>Available Words & Popular Phrases</h2>
+					<ul>
+						<li>Merry Christmas ya filthy animal</li>
+						<li>I pity the fool who hates Christmas</li>
+						<li>I solemnly swear that I am up to no good during Christmas</li>
+					</ul>
+				</div>
 
-	<ul>
-		<h3>Italian</h3>
-		<li>Merry Christmas you filthy animal</li>
-		<li>I pity the fool who hates Christmas</li>
-		<li>I solemnly swear that I am up to no good during Christmas</li>
-
-	</ul>
-</div>
-
-<textarea id="transText" rows="5" cols="50"></textarea> 
-<br><br>
-<input type="radio" name="rad-lang" value="0" checked>Binary<br> 
-<input type="radio" name="rad-lang" value="1">Dothraki<br>
-<input type="radio" name="rad-lang" value="2">Italian<br>
-<input type="radio" name="rad-lang" value="3">Office Speak
-
-<h3 id="transUpdated"></h3>
-<div id="error-message"></div>
-<button id="btn-translate">Translate Language</button>
-
-<script type="text/javascript" src="javascript/main.js"></script>
-<script type="text/javascript" src="javascript/binary.js"></script>
-<script type="text/javascript" src="javascript/italian.js"></script>
-<script type="text/javascript" src="javascript/officespeak.js"></script>
-<script type="text/javascript" src="javascript/Dothraki.js"></script>
-</body>
+				<textarea id="transText" rows="5" cols="60"></textarea> 
+				<br><br>
+				<input class="btn-rad" type="radio" name="rad-lang" value="0" checked>Binary<br> 
+				<input class="btn-rad" type="radio" name="rad-lang" value="1">Dothraki<br>
+				<input class="btn-rad" type="radio" name="rad-lang" value="2">Italian<br>
+				<input class="btn-rad" type="radio" name="rad-lang" value="3">Office Speak
+				<h3 id="transUpdated"></h3>
+				<div id="error-message"></div>
+				<button id="btn-translate">Translate Language</button>
+				<script type="text/javascript" src="javascript/main.js"></script>
+				<script type="text/javascript" src="javascript/knights-iife.js"></script>
+				<script type="text/javascript" src="javascript/binary.js"></script>
+				<script type="text/javascript" src="javascript/italian.js"></script>
+				<script type="text/javascript" src="javascript/officespeak.js"></script>
+				<script type="text/javascript" src="javascript/Dothraki.js"></script>
+			</div>
+		</div>
+	</body>
 </html>
