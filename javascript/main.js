@@ -52,31 +52,34 @@ addTranslate.addEventListener("click", () => {
 //     console.log ('whichselected', whichselected);
 
 //     if (whichselected == 0){
-//         translateToBinary()
+//         Knights.translateToBinary()
 //     }else if (whichselected == 1){
-//        tranlsateToDothraki()
+//        Knights.tranlsateToDothraki()
 //     }
 //     else if (whichselected == 2){
-//         translateToItalian();
+//         Knights.translateToItalian();
 //     }else if (whichselected ==3){
-//         translateToOfficeSpeak();
+//         Knights.translateToOfficeSpeak();
 //     }
 // });
 
-// function translateToItalian(event){
-//  Knights.translateItToItalian();
+// // function translateToItalian(event){
+// //  Knights.translateItToItalian();
 
-// };
+// // };
 
-// function translateToBinary(){
-//  Knights.translateItToBinary();
-// };
+// // function translateToBinary(){
+// //  Knights.translateItToBinary();
+// // };
 
-// function tranlsateToDothraki(){
-//  Knights.translateItToDothraki();
-// };
+// // function tranlsateToDothraki(){
+// //  Knights.translateItToDothraki();
+// // };
 
-// function translateToOfficeSpeak(){
-//  Knights.translateItToOfficeSpeak();
-// };
+// // function translateToOfficeSpeak(){
+// //  Knights.translateItToOfficeSpeak();
+// // };
+
+
+
 

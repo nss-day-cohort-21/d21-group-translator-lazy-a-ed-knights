@@ -3,19 +3,33 @@ console.log("italian.js, yo!");
 var Knights = (function(originalKnights){
 
 	let italian =  { 
-			merry:"MERRY", 
-		    christmas:"CHRISTMAS",
-		    ya: "YA",
-		    filthy: "FILTHY",
-		    animal: "ANIMAL",
-		    hanukkah:"HANNNNNNNN",
+			MERRY:"buon", 
+		    CHRISTMAS:"Natale",
+		    YA: "tu",
+		    FILTHY: "sporco",
+		    ANIMAL: "animale",
+		    I:"Mi",
+		    PITY: "dispiace",
+		    THE: "lo",
+		    FOOL: "stupido",
+		    SOLEMNLY: "Solennemente",
+		    SWEAR: "giurato",
+		    THAT:"che",
+		    AM:"sono",
+		    UP:"",
+		    TO:"per",
+		    NO:"niente",
+		    GOOD:"bene"
 
+// Sono giurato solennemente che non sono per niente bene
 	}
 
 	originalKnights.translateItToItalian = function(){
 		let userInput = transText.value;
-	let newUserInput = userInput.split(" ");
-	let transArray = [];
+			userInput = userInput.toUpperCase();
+		let newUserInput = userInput.split(" ");
+		let transArray = [];
+		let badWords = [];
 	
 	newUserInput.forEach(function(word){
 		// console.log(Object.keys(italian));
@@ -23,15 +37,21 @@ var Knights = (function(originalKnights){
 		let translation = italian[word];
 		if (word in italian){
 		transArray.push(translation)
-		} else{
-			console.log(word, "has been removed because it is not in our dictionary.");
-			document.getElementById("error-message").innerHTML = `"${word}" has been removed because it is not in our dictionary.`
+		} else if (word.length > 1){
+				badWords.push(word);
+				let badWordsArray = badWords.join(", ");
+				// console.log("badWordsArray",badWordsArray);
+				document.getElementById("error-message").innerHTML = `<b><i>"${badWordsArray}"</b></i> have been removed because they are not in our Italian dictionary.`
+		}else{
+			// console.log(word, "has been removed because it is not in our dictionary.");
+			document.getElementById("error-message").innerHTML = `"${word}" has been removed because it is not in our Italian dictionary.`
 		}
 	});
 
 		let transJoin = transArray.join(" ");
+			transJoin = transJoin
 		console.log("transJoin", transJoin);
-		document.getElementById("transUpdated").innerHTML = `${transJoin}`
+		document.getElementById("transUpdated").innerHTML = `Your Translation: ${transJoin}!`
 	}
 
 	return originalKnights;
