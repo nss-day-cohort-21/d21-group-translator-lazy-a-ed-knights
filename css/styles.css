@@ -1,0 +1,60 @@
+.wrapper {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	height: 900px;
+	background-image: url("../images/Christmas-bg.jpg");
+	background-size: 100% auto;
+    background-repeat: no-repeat;
+	background-color: #be1623;
+
+}
+
+.program {
+	border: 2px solid black;
+	border-radius: 5px;
+	width: 400px;
+	height: 475px;
+	padding: 20px;
+	margin: 20px;
+	float: right;
+	background-color: rgba(212, 192, 194, .7);
+}
+h1 {
+	font-size: 1.4em;
+	font-weight: 900;
+	margin: 0;
+	color: #0f6454;
+}
+h2 {
+	margin: 0;
+	color: #0f6454;
+}
+
+h3 {
+	margin: 0;
+	color: #5e0110;
+}
+#availableWords {
+	color: #e8cfba;
+	text-align: center;
+}
+
+#availableWords ul{
+	text-align: left;
+	color: #5e0110;
+
+}
+
+.btn-rad {
+	color: #5e0110;
+	margin-bottom: 10px;
+}
+
+#transUpdated{
+	color: #feefe8;
+	font-size: 1em;
+	border: 1px solid black;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}

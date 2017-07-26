@@ -19,7 +19,7 @@ var Knights = (function(originalKnights){
 		    YEAR:"01111001 01100101 01100001 01110010",
 		    !:"00100001",
 		    .:"00101110"
-}
+		}
 	originalKnights.translateItToBinary = function(){
 		let userInput = transText.value;
 			userInput = userInput.toUpperCase();
