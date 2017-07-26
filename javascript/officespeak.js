@@ -1,6 +1,9 @@
 console.log ("officespeak.js");
 
+
+
 var Knights = (function(originalKnights){
+    let outputBox = document.getElementsByClassName("transBoxType");
 
     let myOfficeSpeak = {
 
@@ -22,7 +25,7 @@ var Knights = (function(originalKnights){
 
     originalKnights.translateToOfficeSpeak = function(){
         let error = document.getElementById("error-message");
-         error.innerHTML = " ";
+         error.innerHTML = "";
         let userInput = transText.value;
             userInput = userInput.toUpperCase();
         let newUserInput = userInput.split(" ");
@@ -53,6 +56,7 @@ var Knights = (function(originalKnights){
         console.log("transJoin", transJoin);
         document.getElementById("transUpdated").innerHTML = `Your Translation: ${transJoin}!`
     }
+    
 
     return originalKnights;
 
