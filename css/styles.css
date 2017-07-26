@@ -54,9 +54,7 @@ h3 {
 #transUpdated{
 	color: #fecd92;
 }
-#error-messag {
-	color: white;
-}
+
 .translationBox {
 	margin: 115px 0 0 30px;
 	float: left;
@@ -92,4 +90,8 @@ h3 {
 	text-align: center;
 	width: 362px;
 	height: 260px;
+}
+
+#error-message {
+	color: white;
 }
