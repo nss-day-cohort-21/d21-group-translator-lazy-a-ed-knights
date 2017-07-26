@@ -67,7 +67,6 @@ addTranslate.addEventListener("click", () => {
 */
 
 //THIS IS THE CODE THAT WORKS FOR ALL MVP
->>>>>>> 85b89c58582bb2ce24c2a35303d6f61838cd371c
 let transText = document.getElementById("transText");
 let addTranslate = document.getElementById("btn-translate");
 let output = document.getElementById("transUpdated");
