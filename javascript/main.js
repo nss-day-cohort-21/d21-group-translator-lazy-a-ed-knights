@@ -54,11 +54,11 @@ addTranslate.addEventListener("click", () => {
     if (whichselected == 0){
         Knights.translateToBinary()
     }else if (whichselected == 1){
-       Knights.tranlsateToDothraki()
+       Knights.translateToDothraki()
     }
     else if (whichselected == 2){
         Knights.translateToItalian();
-    }else if (whichselected ==3){
+    }else if (whichselected == 3){
         Knights.translateToOfficeSpeak();
     }
 });
