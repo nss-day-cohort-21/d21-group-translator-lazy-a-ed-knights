@@ -1,26 +1,33 @@
-console.log("binary.js")
+console.log("Binary Christmas AF");
 
 var Knights = (function(originalKnights){
 
 	let binary =  { 
-			MERRY:"01101101 01100101 01110010 01110010 01111001", 
-		    CHRISTMAS:"01100011 01101000 01110010 01101001 01110011 01110100 01101101 01100001 01110011",
-		    YA: "01111001 01100001",
-		    FILTHY: "01100110 01101001 01101100 01110100 01101000 01111001",
-		    ANIMAL: "01100001 01101110 01101001 01101101 01100001 01101100",
-		    HANUKKAH:"01101000 01100001 01101110 01110101 01101011 01101011 01100001 01101000",
-		    KWANZAA: "dispiace",
-		    TREE: "lo",
-		    GOOD: "stupido",
-		    TIDINGS: "Solennemente",
-		    AND: "giurato",
-		    HAPPY:"che",
-		    NEW:"sono",
-		    YEAR:"01111001 01100101 01100001 01110010",
-		    !:"00100001",
-		    .:"00101110"
-		}
-	originalKnights.translateItToBinary = function(){
+			MERRY:"01001101 01000101 01010010 01010010 01011001", 
+		    CHRISTMAS:"01000011 01001000 01010010 01001001 01010011 01010100 01001101 01000001 01010011",
+		    YA: "01011001 01000001",
+		    FILTHY: "01000110 01001001 01001100 01010100 01001000 01011001",
+		    ANIMAL: "01000001 01001110 01001001 01001101 01000001 01001100",
+		    I:"01001001",
+		    PITY: "01010000 01001001 01010100 01011001",
+		    THE: "01010100 01001000 01000101",
+		    FOOL: "01000110 01001111 01001111 01001100",
+		    SOLEMNLY: "01010011 01001111 01001100 01000101 01001101 01001110 01001100 01011001",
+		    SWEAR: "01010011 01010111 01000101 01000001 01010010",
+		    THAT:"01010100 01001000 01000001 01010100",
+		    AM:"01000001 01001101",
+		    UP:"01010101 01010000",
+		    TO:"01010100 01001111",
+		    NO:"01001110 01001111",
+		    GOOD:"01000111 01001111 01001111 01000100",
+		    DURING:"01000100 01010101 01010010 01001001 01001110 01000111",
+		    WHO:"01010111 01001000 01001111",
+		    HATES:"01001000 01000001 01010100 01000101 01010011"
+
+// Sono giurato solennemente che non sono per niente bene
+	}
+
+	originalKnights.translateToBinary = function(){
 		let userInput = transText.value;
 			userInput = userInput.toUpperCase();
 		let newUserInput = userInput.split(" ");
@@ -28,6 +35,8 @@ var Knights = (function(originalKnights){
 		let badWords = [];
 	
 	newUserInput.forEach(function(word){
+		// console.log(Object.keys(italian));
+		// console.log(italian[word]);
 		let translation = binary[word];
 		if (word in binary){
 		transArray.push(translation)
@@ -35,10 +44,10 @@ var Knights = (function(originalKnights){
 				badWords.push(word);
 				let badWordsArray = badWords.join(", ");
 				// console.log("badWordsArray",badWordsArray);
-				document.getElementById("error-message").innerHTML = `<b><i>"${badWordsArray}"</b></i> have been removed because they are not in our Italian dictionary.`
+				document.getElementById("error-message").innerHTML = `<b><i>"${badWordsArray}"</b></i> have been removed because they are not in our binary dictionary.`
 		}else{
 			// console.log(word, "has been removed because it is not in our dictionary.");
-			document.getElementById("error-message").innerHTML = `"${word}" has been removed because it is not in our Italian dictionary.`
+			document.getElementById("error-message").innerHTML = `"${word}" has been removed because it is not in our binary dictionary.`
 		}
 	});
 
