@@ -28,7 +28,9 @@ var Knights = (function(originalKnights){
 }
 
 originalKnights.translateToDothraki = function(){
-		let userInput = transText.value;
+		let error = document.getElementById("error-message");
+         error.innerHTML = " ";
+         let userInput = transText.value;
 			userInput = userInput.toUpperCase();
 		let newUserInput = userInput.split(" ");
 		let transArray = [];
