@@ -27,7 +27,7 @@ var Knights = (function(originalKnights){
 // Sono giurato solennemente che non sono per niente bene
 	}
 
-	originalKnights.translateItToItalian = function(){
+	originalKnights.translateToItalian = function(){
 		let userInput = transText.value;
 			userInput = userInput.toUpperCase();
 		let newUserInput = userInput.split(" ");
