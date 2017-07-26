@@ -2,7 +2,6 @@
 
 let addTranslate = document.getElementById("btn-translate");
 
-<<<<<<< HEAD
 // addTranslate.addEventListener("click", () => {
 //     let textTrans = document.getElementById("transText").value;
 //     var individualWords = textTrans.split(" ");
@@ -93,50 +92,13 @@ addTranslate.addEventListener("click", () => {
     }
     else if (whichselected == 2){
         Knights.translateToItalian();
-<<<<<<< HEAD
-    }else if (whichselected == 3){
-=======
-    }else if (whichselected ==3){
->>>>>>> 85b89c58582bb2ce24c2a35303d6f61838cd371c
+    }
+    else if (whichselected == 3){
         Knights.translateToOfficeSpeak();
     }
 });
 
-<<<<<<< HEAD
-function translateToItalian(event){
- Knights.translateItToItalian();
 
-};
-
-function translateToBinary(){
- Knights.translateItToBinary();
-};
-
-function tranlsateToDothraki(){
- Knights.translateItToDothraki();
-};
-
-function translateToOfficeSpeak(){
- Knights.translateItToOfficeSpeak();
-};
-=======
-// function translateToItalian(event){
-//  Knights.translateItToItalian();
-
-// };
-
-// function translateToBinary(){
-//  Knights.translateItToBinary();
-// };
-
-// function tranlsateToDothraki(){
-//  Knights.translateItToDothraki();
-// };
-
-// function translateToOfficeSpeak(){
-//  Knights.translateItToOfficeSpeak();
-// };
->>>>>>> 85b89c58582bb2ce24c2a35303d6f61838cd371c
 
 
 
