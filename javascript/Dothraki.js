@@ -56,10 +56,11 @@ originalKnights.translateToDothraki = function(){
 	});
 
 		let transJoin = transArray.join(" ");
-			transJoin = transJoin
+		transJoin = transJoin
 		console.log("transJoin", transJoin);
 		document.getElementById("transUpdated").innerHTML = `Your Translation: ${transJoin}!`
-	}
+
+}
 
 	return originalKnights;
 

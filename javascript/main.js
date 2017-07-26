@@ -5,28 +5,58 @@ let output = document.getElementById("transUpdated");
 
 
 addTranslate.addEventListener("click", () => {
-    let whichselected;
-    var radios = document.getElementsByName("rad-lang");
-    for(let i = 0; i < radios.length; i++){
-        //0 = Binary, 1 = Dothraki, 2 = Italian, 3 = Office Speak
-        if (radios[i].checked){
-            whichselected = radios[i].value;
-            break;
-        }
-    }
-    console.log ('whichselected', whichselected);
+    //let whichselected;
+    var radios = document.querySelector('input[name="rad-lang"]:checked').value;
 
-    if (whichselected == 0){
-        Knights.translateToBinary()
-    }else if (whichselected == 1){
-       Knights.translateToDothraki()
-    }
-    else if (whichselected == 2){
+    switch(radios)    {
+        case "0":
+        Knights.translateToBinary();
+        break;
+
+        case "1":
+        Knights.translateToDothraki();
+        break;
+
+        case "2":
         Knights.translateToItalian();
-    }else if (whichselected == 3){
+        break;
+
+        case "3":
         Knights.translateToOfficeSpeak();
+        break;
     }
-});
+    });
+
+    function speechText() {
+     let msg = new SpeechSynthesisUtterance();
+     msg.text = document.getElementById("transUpdated").innerHTML;
+     msg.pitch = 0;
+     msg.volume = 1;
+     speechSynthesis.speak(msg);
+};
+
+/*
+    //  for(let i = 0; i < radios.length; i++){
+    //     //0 = Binary, 1 = Dothraki, 2 = Italian, 3 = Office Speak
+    //     if (radios[i].checked){
+    //         whichselected = radios[i].value;
+    //         break;
+    //     }
+    // }
+    // console.log ('whichselected', whichselected);
+
+    // if (whichselected == 0){
+    //     Knights.translateToBinary()
+    // }else if (whichselected == 1){
+    //    Knights.translateToDothraki()
+    // }
+    // else if (whichselected == 2){
+    //     Knights.translateToItalian();
+    // }else if (whichselected == 3){
+    //     Knights.translateToOfficeSpeak();
+    // }
+    */
+
 
 
 
