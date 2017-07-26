@@ -3,9 +3,9 @@ console.log("italian.js, yo!");
 var Knights = (function(originalKnights){
 
 	let italian =  { 
-			MERRY:"buon", 
-		    CHRISTMAS:"Natale",
-		    YA: "tu",
+			MERRY:"buon",
+			CHRISTMAS:"Natale",
+			YA: "tu",
 		    FILTHY: "sporco",
 		    ANIMAL: "animale",
 		    I:"Mi",
@@ -46,9 +46,9 @@ var Knights = (function(originalKnights){
 				let badWordsArray = badWords.join(", ");
 				// console.log("badWordsArray",badWordsArray);
 				document.getElementById("error-message").innerHTML = `<b><i>"${badWordsArray}"</b></i> have been removed because they are not in our Italian dictionary.`
-		}else{
+		}else if (badWords.length == 1){
 			// console.log(word, "has been removed because it is not in our dictionary.");
-			document.getElementById("error-message").innerHTML = `"${word}" has been removed because it is not in our Italian dictionary.`
+			document.getElementById("error-message").innerHTML = `"${badWords}" has been removed because it is not in our Italian dictionary.`
 		}
 	});
 
