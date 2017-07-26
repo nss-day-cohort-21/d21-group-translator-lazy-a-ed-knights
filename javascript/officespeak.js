@@ -22,6 +22,8 @@ var Knights = (function(originalKnights){
 }
 
     originalKnights.translateToOfficeSpeak = function(){
+        let error = document.getElementById("error-message");
+         error.innerHTML = " ";
         let userInput = transText.value;
             userInput = userInput.toUpperCase();
         let newUserInput = userInput.split(" ");
@@ -37,7 +39,6 @@ var Knights = (function(originalKnights){
         } else {
             badWords.push(word); 
         } 
-
         if (badWords.length > 1){
                 let badWordsArray = badWords.join(", ");
                 // console.log("badWordsArray",badWordsArray);

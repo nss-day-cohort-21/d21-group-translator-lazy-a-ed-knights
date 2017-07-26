@@ -28,6 +28,8 @@ var Knights = (function(originalKnights){
 	}
 
 	originalKnights.translateToItalian = function(){
+		let error = document.getElementById("error-message");
+         error.innerHTML = " ";
 		let userInput = transText.value;
 			userInput = userInput.toUpperCase();
 		let newUserInput = userInput.split(" ");
