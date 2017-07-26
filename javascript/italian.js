@@ -19,7 +19,10 @@ var Knights = (function(originalKnights){
 		    UP:"",
 		    TO:"per",
 		    NO:"niente",
-		    GOOD:"bene"
+		    GOOD:"bene",
+		    DURING:"durante",
+		    WHO:"Che",
+		    HATES:"odia"
 
 // Sono giurato solennemente che non sono per niente bene
 	}
