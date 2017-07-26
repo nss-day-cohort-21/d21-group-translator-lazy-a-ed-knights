@@ -38,7 +38,6 @@ var Knights = (function(originalKnights){
         } else {
             badWords.push(word); 
         } 
-
         if (badWords.length > 1){
                 let badWordsArray = badWords.join(", ");
                 // console.log("badWordsArray",badWordsArray);
