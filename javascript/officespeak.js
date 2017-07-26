@@ -1,7 +1,14 @@
 console.log ("officespeak.js");
 
-function translateToOfficeSpeak(individualWords) {
+let finalOutput = [];
 
+function translateToOfficeSpeak(individualWords) {
+	forEach(item in individualWords) {
+		if (item == myOfficeSpeak.key) {
+			item = myOfficeSpeak.value;
+			push.finalOutput(item);
+		}
+	}
 }
 
 
