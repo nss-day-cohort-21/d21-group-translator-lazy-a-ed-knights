@@ -26,7 +26,6 @@ var Knights = (function(originalKnights){
 
 // Sono giurato solennemente che non sono per niente bene
 	}
-
 	originalKnights.translateToBinary = function(){
 		let error = document.getElementById("error-message");
          error.innerHTML = " ";
@@ -35,7 +34,6 @@ var Knights = (function(originalKnights){
 		let newUserInput = userInput.split(" ");
 		let transArray = [];
 		let badWords = [];
-	
 	newUserInput.forEach(function(word){
 		// console.log(Object.keys(italian));
 		// console.log(italian[word]);
@@ -52,7 +50,6 @@ var Knights = (function(originalKnights){
 			document.getElementById("error-message").innerHTML = `"${word}" has been removed because it is not in our binary dictionary.`
 		}
 	});
-
 		let transJoin = transArray.join(" ");
 			transJoin = transJoin
 		console.log("transJoin", transJoin);

@@ -5,6 +5,7 @@ let output = document.getElementById("transUpdated");
 
 
 addTranslate.addEventListener("click", () => {
+
     var radios = document.querySelector('input[name = "rad-lang"]:checked').value;
     // for(let i = 0; i < radios.length; i++){
     //     //0 = Binary, 1 = Dothraki, 2 = Italian, 3 = Office Speak
@@ -29,10 +30,12 @@ addTranslate.addEventListener("click", () => {
         Knights.translateToOfficeSpeak();
         break;
     }
-});
+    });
 
-
-
-
-
-
+    function speechText() {
+     let msg = new SpeechSynthesisUtterance();
+     msg.text = document.getElementById("transUpdated").innerHTML;
+     msg.pitch = 0;
+     msg.volume = 1;
+     speechSynthesis.speak(msg);
+};

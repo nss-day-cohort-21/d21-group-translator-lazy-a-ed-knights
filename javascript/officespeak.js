@@ -51,7 +51,7 @@ var Knights = (function(originalKnights){
         }
     });
 
-        let transJoin = transArray.join(" ");
+       let transJoin = transArray.join(" ");
             transJoin = transJoin
         console.log("transJoin", transJoin);
         document.getElementById("transUpdated").innerHTML = `Your Translation: ${transJoin}!`
