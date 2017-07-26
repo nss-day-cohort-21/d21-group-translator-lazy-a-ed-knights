@@ -63,22 +63,6 @@ addTranslate.addEventListener("click", () => {
     }
 });
 
-// function translateToItalian(event){
-//  Knights.translateItToItalian();
-
-// };
-
-// function translateToBinary(){
-//  Knights.translateItToBinary();
-// };
-
-// function tranlsateToDothraki(){
-//  Knights.translateItToDothraki();
-// };
-
-// function translateToOfficeSpeak(){
-//  Knights.translateItToOfficeSpeak();
-// };
 
 
 
