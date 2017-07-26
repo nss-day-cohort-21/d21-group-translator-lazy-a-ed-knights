@@ -1,3 +1,8 @@
 console.log("knights-iife.js, yo!");
 
-var Knights = {};
+var Knights = (function(){
+
+	return {};
+
+
+})();
