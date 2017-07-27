@@ -42,8 +42,15 @@ var Knights = (function(originalKnights){
 		let translation = italian[word];
 		if (word in italian){
 		transArray.push(translation)
+		let transJoin = transArray.join(" ");
+			// transJoin = transJoin;
+		// console.log("transJoin", transJoin);
+		document.getElementById("transUpdated").innerHTML = `Your Translation: ${transJoin}!`;
+
 		} else{
 			badWords.push(word);
+			document.getElementById("transUpdated").innerHTML = "Nothing to Translate!";
+
 		} if (badWords.length > 1){	
 				let badWordsArray = badWords.join(", ");
 				// console.log("badWordsArray",badWordsArray);
@@ -54,10 +61,10 @@ var Knights = (function(originalKnights){
 		}
 	});
 
-		let transJoin = transArray.join(" ");
-			transJoin = transJoin
-		console.log("transJoin", transJoin);
-		document.getElementById("transUpdated").innerHTML = `Your Translation: ${transJoin}!`;
+		// let transJoin = transArray.join(" ");
+		// 	transJoin = transJoin
+		// console.log("transJoin", transJoin);
+		// document.getElementById("transUpdated").innerHTML = `Your Translation: ${transJoin}!`;
 
 }
 

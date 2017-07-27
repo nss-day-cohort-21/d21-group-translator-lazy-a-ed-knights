@@ -39,9 +39,16 @@ var Knights = (function(originalKnights){
 		// console.log(italian[word]);
 		let translation = binary[word];
 		if (word in binary){
-		transArray.push(translation)
-		} else if (word.length > 1){
-				badWords.push(word);
+			transArray.push(translation)
+		let transJoin = transArray.join(" ");
+			// transJoin = transJoin;
+		// console.log("transJoin", transJoin);
+		document.getElementById("transUpdated").innerHTML = `Your Translation: ${transJoin}!`;
+		} else{
+			badWords.push(word);
+			document.getElementById("transUpdated").innerHTML = "Nothing to Translate!";
+
+		} if (badWords.length > 1){	
 				let badWordsArray = badWords.join(", ");
 				// console.log("badWordsArray",badWordsArray);
 				document.getElementById("error-message").innerHTML = `<b><i>"${badWordsArray}"</b></i> have been removed because they are not in our binary dictionary.`
@@ -50,10 +57,7 @@ var Knights = (function(originalKnights){
 			document.getElementById("error-message").innerHTML = `"${word}" has been removed because it is not in our binary dictionary.`
 		}
 	});
-		let transJoin = transArray.join(" ");
-			transJoin = transJoin
-		console.log("transJoin", transJoin);
-		document.getElementById("transUpdated").innerHTML = `Your Translation: ${transJoin}!`
+	
 	}
 
 	return originalKnights;
