@@ -40,7 +40,8 @@ originalKnights.translateToDothraki = function(){
 		// console.log(Object.keys(Dothraki));
 		// console.log(Dothraki[word]);
 		let translation = Dothraki[word];
-		if (word in Dothraki){    transArray.push(translation)
+		if (word in Dothraki){    
+            transArray.push(translation)
         let transJoin = transArray.join(" ");
             // transJoin = transJoin;
         // console.log("transJoin", transJoin);
@@ -59,9 +60,7 @@ originalKnights.translateToDothraki = function(){
 			document.getElementById("error-message").innerHTML = `"${badWords}" has been removed because it is not in our Dothraki dictionary.`
 		}
 	});
-
-
-}
+};
 
 	return originalKnights;
 

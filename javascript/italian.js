@@ -1,4 +1,5 @@
 console.log("italian.js, yo!");
+// File created by Dr. Teresa Vasquez
 
 var Knights = (function(originalKnights){
 
@@ -23,9 +24,7 @@ var Knights = (function(originalKnights){
 		    DURING:"durante",
 		    WHO:"Che",
 		    HATES:"odia"
-
-// Sono giurato solennemente che non sono per niente bene
-	}
+	};
 
 	originalKnights.translateToItalian = function(){
 		let error = document.getElementById("error-message");
@@ -37,36 +36,23 @@ var Knights = (function(originalKnights){
 		let badWords = [];
 	
 	newUserInput.forEach(function(word){
-		// console.log(Object.keys(italian));
-		// console.log(italian[word]);
 		let translation = italian[word];
-		if (word in italian){
-		transArray.push(translation)
-		let transJoin = transArray.join(" ");
-			// transJoin = transJoin;
-		// console.log("transJoin", transJoin);
-		document.getElementById("transUpdated").innerHTML = `Your Translation: ${transJoin}!`;
+		if (word in italian){    
+			transArray.push(translation);
+        let transJoin = transArray.join(" ");
+        document.getElementById("transUpdated").innerHTML = `Your Translation: ${transJoin}!`;
+        } else{
+            badWords.push(word);
+            document.getElementById("transUpdated").innerHTML = "Nothing to Translate!";
 
-		} else{
-			badWords.push(word);
-			document.getElementById("transUpdated").innerHTML = "Nothing to Translate!";
-
-		} if (badWords.length > 1){	
-				let badWordsArray = badWords.join(", ");
-				// console.log("badWordsArray",badWordsArray);
-				document.getElementById("error-message").innerHTML = `<b><i>"${badWordsArray}"</b></i> have been removed because they are not in our Italian dictionary.`
+        } if (badWords.length > 1){ 
+                let badWordsArray = badWords.join(", ");
+                document.getElementById("error-message").innerHTML = `<b><i>"${badWordsArray}"</b></i> have been removed because they are not in our Italian dictionary.`
 		}else if (badWords.length == 1){
-			// console.log(word, "has been removed because it is not in our dictionary.");
 			document.getElementById("error-message").innerHTML = `"${badWords}" has been removed because it is not in our Italian dictionary.`
 		}
 	});
-
-		// let transJoin = transArray.join(" ");
-		// 	transJoin = transJoin
-		// console.log("transJoin", transJoin);
-		// document.getElementById("transUpdated").innerHTML = `Your Translation: ${transJoin}!`;
-
-}
+};
 
 	return originalKnights;
 
